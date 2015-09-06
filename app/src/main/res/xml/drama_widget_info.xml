@@ -6,6 +6,6 @@
     android:previewImage="@drawable/drama"
     android:initialLayout="@layout/drama_widget"
     android:resizeMode="horizontal|vertical"
-    android:widgetCategory="keyguard"
+    android:widgetCategory="home_screen|keyguard"
     android:initialKeyguardLayout="@layout/drama_widget">
 </appwidget-provider>
