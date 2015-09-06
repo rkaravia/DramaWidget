@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.github.rzoller.dramaticlockscreen" >
+    package="io.github.rzoller.dramawidget" >
 
     <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:label="@string/app_name">
 
-        <receiver android:name=".DramaWidget" >
+        <receiver android:name="io.github.rzoller.dramawidget.DramaWidget" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -19,9 +16,8 @@
         </receiver>
 
         <service
-            android:name=".DramaService"
-            android:enabled="true"
-            android:exported="true" >
+            android:name="io.github.rzoller.dramawidget.DramaService"
+            android:enabled="true" >
         </service>
     </application>
 

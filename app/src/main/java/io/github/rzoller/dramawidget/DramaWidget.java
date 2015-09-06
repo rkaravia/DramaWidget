@@ -1,4 +1,4 @@
-package io.github.rzoller.dramaticlockscreen;
+package io.github.rzoller.dramawidget;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -25,11 +25,12 @@ public class DramaWidget extends AppWidgetProvider {
 
     private static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                         int appWidgetId) {
+        Log.i(TAG, "Initialize DramaWidget");
+
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.drama_widget);
 
-        Log.w(TAG, "Init button: drama");
-
+        // Launch DramaService on click
         Intent intent = new Intent(context, DramaService.class);
         PendingIntent serviceIntent = PendingIntent.getService(context, 0, intent, 0);
         views.setOnClickPendingIntent(R.id.button_drama, serviceIntent);

@@ -1,4 +1,4 @@
-package io.github.rzoller.dramaticlockscreen;
+package io.github.rzoller.dramawidget;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
